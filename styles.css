@@ -1,0 +1,162 @@
+/* All pages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+
+/* Website font text for all pages*/
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    background: linear-gradient(135deg, #012922, #012c2e); 
+    color: #05f7f7; 
+    line-height: 1.6;
+    animation: glow 2s infinite alternate; 
+}
+
+
+header {
+    background: rgba(0, 12, 10, 0.7); /* Semi-transparent background for header */
+    padding: 20px; 
+    text-align: center; 
+    position: relative; 
+    overflow: hidden; 
+}
+
+h1 {
+    font-size: 2.5rem; /* Font size for heading */
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points from list */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    display: inline; /* Display list items in a line */
+    margin: 0 15px; /* Margin between list items */
+}
+
+nav ul li a {
+    color: #08f5c1; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Bold links */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #fff; /* enables hover color for links */
+    text-shadow: 0 0 5px #08f5c2, 0 0 10px #06e5f5; /* enables text shadow effect */
+}
+
+main {
+    padding: 20px; /* Padding inside main content area */
+    text-align: center; /* Center-align text */
+}
+
+.about, .Photo, .Trait, .Motto, .Vision, .Mission, .Resume, .Keirsey, .Twelve, .Reflection, .Degree, .Career, .Storyboard, .Utech, .Reference { /* enable glow bordering around each heading*/
+    margin: 20px 0; /* Margin around sections */
+    padding: 20px; /* Padding inside sections */
+    background: rgba(2, 116, 100, 0.1);                 /* Semi-transparent background for sections */
+    border-radius: 10px;            /* Rounded corners */
+    box-shadow: 0 0 20px rgba(4, 243, 191, 0.555);            /* Box shadow effect */
+    animation: slideIn 1s ease-in-out; /* Slide-in animation */
+    transition: transform 0.3s, box-shadow 0.3s, border 0.3s; /* Smooth transitions */
+}
+
+.about:hover, .Photo:hover, .Trait:hover, .Motto:hover, .Vision:hover, .Mission:hover, .Resume:hover, .Keirsey:hover, .Twelve:hover, .Reflection:hover, .Degree:hover, .Career:hover, .Storyboard:hover, .Utech:hover, .Reference:hover { /* enable hover effect for each heading*/
+    transform: translateY(-5px); /* Move section up slightly on hover */
+    box-shadow: 0 0 30px rgba(4, 243, 191, 0.8); /* Stronger box shadow on hover */
+    border: 2px solid #08f5c1; /* Adds a glowing border on hover */
+}
+
+.profile-pic {
+    width: 150px; /* Width of profile picture */
+    height: 150px; /* Height of profile picture */
+    border-radius: 50%; /* Round profile picture */
+    margin-top: 10px; /* Margin above profile picture */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s; /* Smooth scale transition */
+}
+
+.profile-pic:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+
+/* creates the glowing animation effect for the footer text*/
+@keyframes footerGlow {
+    0% {
+        text-shadow: 0 0 5px #08f5c1, 0 0 10px #08f5c1, 0 0 15px #08f5c1, 0 0 20px #08f5c1, 0 0 25px #08f5c1, 0 0 30px #08f5c1, 0 0 35px #08f5c1;
+        color: #08f5c1;
+    }
+    50% {
+        text-shadow: 0 0 10px #08f5c1, 0 0 20px #08f5c1, 0 0 30px #08f5c1, 0 0 40px #08f5c1, 0 0 50px #08f5c1, 0 0 60px #08f5c1, 0 0 70px #08f5c1;
+        color: #ffffff;
+    }
+    100% {
+        text-shadow: 0 0 5px #08f5c1, 0 0 10px #08f5c1, 0 0 15px #08f5c1, 0 0 20px #08f5c1, 0 0 25px #08f5c1, 0 0 30px #08f5c1, 0 0 35px #08f5c1;
+        color: #08f5c1;
+    }
+}
+
+footer {
+    text-align: center; /* Center-align text in footer */
+    padding: 20px; /* Padding inside footer */
+    background: rgba(0, 8, 7, 0.568); /* Semi-transparent background for footer */
+    position: relative; /* Relative positioning */
+    bottom: 0; /* Stick footer to the bottom */
+    width: 100%; /* Full width of the footer */
+    animation: footerGlow 2s infinite alternate; /* Applys the glow animation */
+}
+
+
+/* Keyframe animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with transparent */
+    }
+    to {
+        opacity: 1; /* Fade to opaque */
+    }
+}
+
+/* Keyframe animation for slide-in effect */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px); 
+        opacity: 0; 
+    }
+    to {
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
+
+
+/* Ensure the body takes at least the full height of the viewport */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+ /*Flex-grow will allow the main content to expand and push the footer down */
+main {
+    flex-grow: 1;
+}
+
+/* Adds some padding to the main content */
+main {
+    padding: 20px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #f1f1f1; 
+    text-align: center;     
+    padding: 10px;           
+}
